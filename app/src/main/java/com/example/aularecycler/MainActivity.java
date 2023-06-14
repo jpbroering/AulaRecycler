@@ -58,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(Produto p) {
                         //Aqui é o que vai acontecer quando clicar em um item
-                        Toast.makeText(MainActivity.this, p.getNome(), Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(MainActivity.this, Edit.class);
+                        startActivity(i);
+                        MainActivity.p = Edit.p;
                     }
                 });
                 recycler.setAdapter(adapter);
